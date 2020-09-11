@@ -44,4 +44,65 @@
 
 5. ;
 
-   1. 
+   1. Swift doesn't require you to write a semicolon(;) after each statement , although you can
+   2. semicolons are required if you want to wirte multiple separate statements on a single line
+
+6. 基本数据类型
+
+   1. 整数
+      - 无小数部分的数字
+      - Int，Int8，Int16，Int32，Int，UInt
+      - Int的位数与操作系统一致。有可能，尽量用Int
+      - Int.min,Int.max
+   2. 实数
+      - 有小数部分的数字
+      - Float（32位，精度6位），Double（64位，精度15位）
+   3. Bool
+      - Bool型文字：true，false
+
+7. 类型转换和类型推导
+
+   1. 类型推导
+
+      ```
+      let meaningOfLife = 42
+      // meaningOfLife is inferred to be of type Int
+      let pi = 3.14159
+      // pi is inferred to be of type Double
+      ```
+
+   2. 类型转换
+
+      ```
+      let three=3
+      let pp=0.141596l
+      let pi = Double(three) + pp
+      
+      ```
+
+8. String and Character
+
+   1. String Literal : surrounded by double quotation marks ("")
+
+      ```
+      let string1="hello"
+      let string2="there"
+      var welcome = string1 + string2
+      ```
+
+   2. Character Literal
+
+      ```
+      let exclamationMark: Character = "!"
+      welcome.append(exclamationMark)
+      ```
+
+   3. String Interpolation
+
+      ```
+      let multiplier = 3
+      let message = "\(multiplier)times 2.5 is \(Double(multiplier)*2.5)"
+      // message is "3 times 2.5 is 7.5"
+      ```
+
+9. String and Unicode
