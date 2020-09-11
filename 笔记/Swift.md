@@ -106,3 +106,50 @@
       ```
 
 9. String and Unicode
+
+   1. Unicode
+
+   2. Counting Characters: .count
+
+      ```
+      var word = "cafe"
+      print("the number of characters in \(word) is \(word.count)")
+      
+      ```
+
+10. String Index
+
+    1. You can access any character(of type Character) in a String using [] notation. But the indexes inside the [] are not Int, they are a type called String.Index.
+
+       ```
+       let s:String = "hello"
+       let firstIndex:String.Index = s.startIndex
+       
+       let firstChar:Character = s[firstIndex]
+       
+       let fifthChar:Character = s[s.index(firstIndex,offsetBy:4)]
+       
+       let substring = s[firstIndex...secondIndex]
+       ```
+
+11. Tuples(元组)
+
+    1. Tuples group multiple values into a single compound value. The values within a tuple can be of any type.
+
+       ```
+       let http404Error = (404."Not Found")
+       // http404Error is of type (Int,String), and equals (404,"Not Found")
+       ```
+
+    2. decompose a tuple's contents into separate constants or variables
+
+       ```
+       let (statusCode, statusMessage) = http404Error
+       print("The status code is \(statusCode)")
+       //prints "The status code is 404"
+       
+       let (justTheStatusCode,_) = http404Error
+       
+       ```
+
+       
