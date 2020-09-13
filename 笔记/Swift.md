@@ -405,4 +405,76 @@
        }
        ```
 
-22. 
+22. guard(early exit)
+
+    1. You use a guard statement to require that a condition must be true in order for the code after the guard statement to be executed.(check illegal condition)
+
+    2. like an if statement,executes statements depending on the Boolean value of an expression.Unlike an if statement, a guard statement always has an else clause---the code inside the else clause is excuted if the condition is not true.
+
+       ```
+       guard let score >= 0 else{
+       	return
+       }
+       ```
+
+23. Optionals(可选类型)
+
+    1. 数据类型？ 可能是某类型的值或没有值nil
+
+       ```
+       let optionalInt:Int? = 9
+       ```
+
+24. unwrap(强制解包)
+
+    1. 强制解包操作，使用！
+
+       ```
+       let x:String? = "hello"
+       let y = x!
+       ```
+
+    2. 如果不合法，可能报错
+
+       ```
+       let x : String ?
+       let y = x!
+       ```
+
+25. 隐式解包可选类型
+
+    1. 数据类型 ！
+
+       ```
+       let x : String! = "Hello"
+       let y = x
+       ```
+
+    2. 使用时不需要强制解包
+
+26. optional default
+
+    ```
+    let s:String?= ... //might be nil
+    display.text = S ?? ""
+    ```
+
+27. if let 可选绑定
+
+    1. 使 可选绑定（optional binding， 使用let）来判断可选类型是否包含值，如果包含就把值赋给个临时常量或者变量
+
+       ```
+       var optionalName:String? = "John Appleseed"
+       var greeting = "Hello!"
+       if let name = optionalName{
+       	greeting = "Hello,\(name)"
+       }
+       ```
+
+28. Chained
+
+    ```
+    没看懂
+    ```
+
+29. 
