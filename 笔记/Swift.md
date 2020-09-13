@@ -287,4 +287,75 @@
        }
        ```
 
+    6. Tuple
+    
+       ```
+       let somePoint=(1,1)
+       switch somePoint{
+       	case (0,0):
+       		print("(0,0)is at the origin")
+       	case (_,0):
+       		...
+       	case (0,_):
+       		...
+       	case (-2...2,-2...2):
+       		...
+       	default:
+       		...
+       }
+       ```
+    
+    7. value bingdings
+    
+       ```
+       let anotherPoint = (2,0)
+       switch anotherpoint{
+       	case (let x,0):
+       		...
+       	case (0,let y):
+       		...
+       	case let(x,y):
+       		...
+       	default:
+       		...
+       }
+       ```
+    
+    8. where
+    
+       ```
+       let yetAnotherPoint = (1,-1)
+       switch yetAnotherPoint{
+       	case let(x,y) where x==y:
+       		...
+       	case let(x,y) where x==-y:
+       		...
+       	case let(x,y):
+       		...
+       }
+       ```
+    
+    9. compound cases
+    
+       ```
+       let someCharacter: Character = "e"
+       switch someCharacter{
+       	case "a","e","i","o","u":
+       		...
+       	case "b","c","d","f":
+       		...
+       	default:
+       		...
+       }
        
+       
+       let stillAnotherPoint = (9,0)
+       switch stillAnotherPoint{
+       case (let distance,0),(0,let distance):
+       	print
+       default:
+       	...
+       	}
+       ```
+    
+19. fallthrough
