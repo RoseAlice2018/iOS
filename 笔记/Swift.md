@@ -359,3 +359,50 @@
        ```
     
 19. fallthrough
+
+    1. 每个需要贯穿特性的case分支使用fall through
+
+       ```
+       let integer=5
+       var description = "the number \(integer) is"
+       switch integer{
+       	case 2,3,4,5,7:
+       		description += "a prime number,and also"
+       		fallthrough
+       	default:
+       		description +="an integer."
+       }
+       print(description)
+       ```
+
+20. continue
+
+    1. continue 语句告诉一个循环体立刻停止本次循环，重新开始下次循环
+
+       ```
+       let puzzleinput="great minds think alike"
+       var puzzleOutput=""
+       for character in puzzleInput.characters{
+       	switch character{
+       		case "a","e","i","o","u"," ":
+       			continue
+       		default:
+       			puzzleOutput.append(character)
+       	}
+       }
+       print(puzzleOutput)
+       ```
+
+21. break
+
+    1. break语句会立刻结束整个控制流的执行。要更早的结束一个代码块或者一个循环体时，使用break语句。
+
+       ```
+       let number=3
+       switch number{
+       	case 3:
+       		break;
+       }
+       ```
+
+22. 
