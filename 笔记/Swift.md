@@ -477,4 +477,83 @@
     没看懂
     ```
 
-29. 
+29. Array
+
+    1. An array stores values of the same type in an ordered list
+
+    2. declare
+
+       ```
+       var shoppintList = ["Eggs","Milk"]
+       // var shoppintList:[String] = ["Eggs","Milk"]
+       // var shoppintList:Array<String> = ["Eggs","Milk"]
+       // shoppintList has been initialized with two initial items
+       //var someInts = [Int]()
+       
+       ```
+
+    3. 索引和下标：基于0
+
+       ```
+       shoppingList[0]
+       let array = ["a","b","c","d"]
+       let a = array[2..3] //["b","c"]
+       ```
+
+    4. 其他方法和属性
+
+       - count,first,last
+       - isEmpty,append,insert,+,=,.....
+
+30. Set
+
+    1. A set stores distinct values of the same type in a collection with no defined ordering
+
+    2. 声明
+
+       ```
+       var favoriteGenres: Set<String> = ["Rock","Classical","Hip hop"]
+       // favoriteGenres has been initialized with three initial items
+       ```
+
+    3. 集合操作
+
+       ```
+       let oddDigits: Set = [1, 3, 5, 7, 9] 
+        let evenDigits: Set = [0, 2, 4, 6, 8] 
+        let singleDigitPrimeNumbers: Set = [2, 3, 5, 7] 
+        
+        oddDigits.union(evenDigits).sorted() // [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        oddDigits.intersection(evenDigits).sorted() // []
+        oddDigits.subtracting(singleDigitPrimeNumbers).sorted() // [1, 9]
+        oddDigits.symmetricDifference(singleDigitPrimeNumbers).sorted() // [1, 2, 9]
+        if favoriteGenres.contains("Funk") { 
+        print("I get up on the good foot.”)
+        } 
+       ```
+
+31. dictionary
+
+    1. A *dictionary* stores associations between keys of the same type 
+
+       and values of the same type in a collection with no defifined 
+
+       ordering.（Hashable）
+
+    2. 声明
+
+       ```
+       var airports: [String: String] = ["YYZ": "Toronto Pearson", "DUB":"Dublin"]
+       ```
+
+    3. 通过key访问
+
+       ```
+       airports["LHR"] = "London"
+        for (airportCode, airportName) in airports { 
+        print("\(airportCode): \(airportName)") 
+        }
+       ```
+
+32. Function
+
